@@ -1,0 +1,20 @@
+.pad {
+	background-color: #6496c8;
+    border: 2px;
+    color: white;
+    margin: .5em;
+    width: 25%;
+    height: 20%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-transition-duration: 0.4s; /* Safari */
+    border-radius: 4px;
+    transition-duration: 0.4s;
+}
+.pad:hover {
+    background-color: #346392;
+    text-shadow: -1px 1px #27496d;
+}
+.pad:active {
+    background-color: #27496d;
+    text-shadow: -1px 1px #193047;
+}
