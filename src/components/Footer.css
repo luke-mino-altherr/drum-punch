@@ -1,3 +1,28 @@
+@font-face {
+	font-family: 'Roboto';
+	src: url('./shared/fonts/Roboto-Regular-webfont.eot');
+  	src: url('./shared/fonts/Roboto-Regular-webfont.ttf') format('truetype'),
+       url('./shared/fonts/Roboto-Regular-webfont.svg') format('svg');	
+    font-style: normal;
+  	font-weight: 400;
+}
+@font-face {
+	font-family: 'RobotoMono';
+	src: url('shared/fonts/roboto-mono_regular.eot');
+  	src: url('shared/fonts/roboto-mono_regular.woff') format('woff'),
+       url('shared/fonts/roboto-mono_regular.ttf') format('truetype'),
+       url('shared/fonts/roboto-mono_regular.svg') format('svg');
+}
 .footer {
+	font-family: 'RobotoMono';
 	margin-top: 20px;
+	font-size: 1.3vw;
+}
+.link {
+	font-family: 'RobotoMono';
+	text-decoration: none;
+	color: black;
+}
+.link:hover {
+	color: #c8bc64;
 }

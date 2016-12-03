@@ -1,4 +1,5 @@
 drumpad.sublime-project
 drumpad.sublime-workspace
 node_modules
-www/bundle.js
+www/
+npm-debug.log

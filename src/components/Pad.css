@@ -9,6 +9,7 @@
     -webkit-transition-duration: 0.4s; /* Safari */
     border-radius: 4px;
     transition-duration: 0.4s;
+    outline:none;
 }
 .pad:hover {
     background-color: #346392;

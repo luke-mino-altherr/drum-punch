@@ -1,0 +1,24 @@
+@font-face {
+	font-family: 'Bungee';
+	src: url('./shared/fonts/Bungee-Regular.ttf');
+
+	font-style: normal;
+  	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'BungeeHairline';
+	src: url('./shared/fonts/BungeeHairline-Regular.ttf');
+
+	font-style: normal;
+  	font-weight: 400;
+}
+.header {
+	font-family: 'Bungee';
+	font-size: 8vw;
+	margin-bottom: 20px;
+}
+.thin {
+	font-family: 'BungeeHairline';
+	font-size: .2em;
+}
