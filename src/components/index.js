@@ -4,16 +4,14 @@ import Header from './Header'
 import Footer from './Footer'
 import style from './index.css'
 
-class App extends React.Component {
-	render() {
-		return ( 
-			<div className="app">
+const App = () => {
+	return ( 
+		<div className="app">
 			<Header />
-				<Pads />
-				<Footer />
-			</div>
-		)
-	}
+			<Pads />
+			<Footer />
+		</div>
+	)
 }
 
 export default App
