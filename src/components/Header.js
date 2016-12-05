@@ -4,7 +4,7 @@ import style from './Header.css'
 const Header = () => {
 	return( 
 		<div className="header">
-			Rum Punch<br/>
+			Drum Punch<br/>
 			<span className="thin">by LMA</span>
 		</div>
 	)
