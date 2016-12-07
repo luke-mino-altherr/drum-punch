@@ -4,7 +4,8 @@ import {playInstrument} from '../actions'
 
 class Pad extends React.Component {
 	render() {
-		const play = () => {
+		const play = (event) => {
+			console.log(event);
 			playInstrument(this.props.id)
 		}
 		return ( 

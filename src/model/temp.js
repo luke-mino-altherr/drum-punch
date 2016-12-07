@@ -1,30 +1,31 @@
 
 export const instrument1 = {
 	id: 1,
-	name: "Low Tom", 
+	name: "Tom", 
 	config: {
-		level: 1,
+		level: 0.7,
 		osc: {
 			enable: 1,
 			level: 1,
+			waveform: 'sine',
 			amplitude: {
 				attack: 0,
 				attackType: 0,
-				decay: 5,
+				decay: 3,
 				decayType: 1
 			},
 			frequency: {
 				attack: 0,
 				attackType: 0,
-				decay: 0.15,
+				decay: 0.08,
 				decayType: 1,
 				startValue: 349.23,
-				endValue: 87.31
+				endValue: 174.61
 			}
 		},
 		noise: {
 			enable: 1,
-			level: 0.1,
+			level: 0.05,
 			amplitude: {
 				attack: 0.2,
 				attackType: 0,
@@ -42,11 +43,11 @@ export const instrument1 = {
 
 const instrument2 = {
 	id: 2,
-	name: "High Tom", 
+	name: "Open Hat", 
 	config: {
 		level: 1,
 		osc: {
-			enable: 1,
+			enable: 0,
 			level: 1,
 			amplitude: {
 				attack: 0,
@@ -64,17 +65,17 @@ const instrument2 = {
 			}
 		},
 		noise: {
-			enable: 0,
+			enable: 1,
 			level: 0.2,
 			amplitude: {
-				attack: 0.2,
+				attack: 0,
 				attackType: 0,
-				decay: 0.8,
-				decayType: 0
+				decay: 1.5,
+				decayType: 1
 			},
 			filter: {
-				type: 'bandpass',
-				cutoff: 110,
+				type: 'highpass',
+				cutoff: 6000,
 				q: 1
 			}
 		}
