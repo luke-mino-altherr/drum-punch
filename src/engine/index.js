@@ -47,6 +47,7 @@ class Signal {
 		this.enable = config.enable;
 		this.level = config.level;
 		this.masterLevel = config.masterLevel;
+		this.waveform = config.waveform || 'sine';
 		this.ampEnv = new Envelope(
 			config.amplitude.attack,
 			config.amplitude.attackType,
@@ -79,7 +80,9 @@ class Signal {
 		return vco
 	}
 	createVco() {
-		return this.audioContext.createOscillator()
+		var osc = this.audioContext.createOscillator()
+		osc.type = this.waveform;
+		return osc;
 	}
 	createVca() {
 		var vca = this.audioContext.createGain();

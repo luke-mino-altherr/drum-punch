@@ -1,14 +1,14 @@
 
 export const instrument1 = {
 	id: 1,
-	name: "Instrument 1", 
+	name: "Low Tom", 
 	config: {
 		level: 1,
 		osc: {
 			enable: 1,
 			level: 1,
 			amplitude: {
-				attack: 0.2,
+				attack: 0,
 				attackType: 0,
 				decay: 5,
 				decayType: 1
@@ -16,20 +16,20 @@ export const instrument1 = {
 			frequency: {
 				attack: 0,
 				attackType: 0,
-				decay: 1,
+				decay: 0.15,
 				decayType: 1,
-				startValue: 440,
-				endValue: 44
+				startValue: 349.23,
+				endValue: 87.31
 			}
 		},
 		noise: {
 			enable: 1,
-			level: 1,
+			level: 0.1,
 			amplitude: {
 				attack: 0.2,
 				attackType: 0,
-				decay: 2,
-				decayType: 1
+				decay: 0.6,
+				decayType: 0
 			},
 			filter: {
 				type: 'lowpass',
@@ -42,39 +42,39 @@ export const instrument1 = {
 
 const instrument2 = {
 	id: 2,
-	name: "Instrument 2", 
+	name: "High Tom", 
 	config: {
 		level: 1,
 		osc: {
 			enable: 1,
 			level: 1,
 			amplitude: {
-				attack: 0.2,
+				attack: 0,
 				attackType: 0,
-				decay: 5,
+				decay: 4,
 				decayType: 1
 			},
 			frequency: {
 				attack: 0,
 				attackType: 0,
-				decay: 3,
+				decay: 0.2,
 				decayType: 1,
-				startValue: 440,
-				endValue: 440
+				startValue: 293.66,
+				endValue: 146.83
 			}
 		},
 		noise: {
-			enable: 1,
-			level: 1,
+			enable: 0,
+			level: 0.2,
 			amplitude: {
 				attack: 0.2,
 				attackType: 0,
-				decay: 5,
-				decayType: 1
+				decay: 0.8,
+				decayType: 0
 			},
 			filter: {
-				type: 'highpass',
-				cutoff: 440,
+				type: 'bandpass',
+				cutoff: 110,
 				q: 1
 			}
 		}
@@ -83,11 +83,11 @@ const instrument2 = {
 
 const instrument3 = {
 	id: 1,
-	name: "Instrument 1", 
+	name: "Hi Hat", 
 	config: {
 		level: 1,
 		osc: {
-			enable: 1,
+			enable: 0,
 			level: 1,
 			amplitude: {
 				attack: 0.2,
@@ -108,15 +108,15 @@ const instrument3 = {
 			enable: 1,
 			level: 1,
 			amplitude: {
-				attack: 0.2,
+				attack: 0,
 				attackType: 0,
-				decay: 5,
+				decay: 0.3,
 				decayType: 1
 			},
 			filter: {
-				type: 'highpass',
-				cutoff: 440,
-				q: 1
+				type: 'bandpass',
+				cutoff: 8000,
+				q: 1.4
 			}
 		}
 	}
@@ -124,14 +124,14 @@ const instrument3 = {
 
 const instrument4 = {
 	id: 1,
-	name: "Instrument 1", 
+	name: "Kick Drum", 
 	config: {
-		level: 2,
+		level: 1,
 		osc: {
 			enable: 1,
 			level: 1,
 			amplitude: {
-				attack: 0.2,
+				attack: 0,
 				attackType: 0,
 				decay: 5,
 				decayType: 1
@@ -139,10 +139,10 @@ const instrument4 = {
 			frequency: {
 				attack: 0,
 				attackType: 0,
-				decay: 0.2,
+				decay: 0.05,
 				decayType: 1,
 				startValue: 440,
-				endValue: 44
+				endValue: 60
 			}
 		},
 		noise: {
@@ -165,9 +165,9 @@ const instrument4 = {
 
 const instrument5 = {
 	id: 1,
-	name: "Instrument 1", 
+	name: "Snare", 
 	config: {
-		level: 0.1,
+		level: 1,
 		osc: {
 			enable: 1,
 			level: 1,
@@ -183,7 +183,7 @@ const instrument5 = {
 				decay: 0.2,
 				decayType: 1,
 				startValue: 220,
-				endValue: 440
+				endValue: 220
 			}
 		},
 		noise: {
@@ -196,49 +196,49 @@ const instrument5 = {
 				decayType: 1
 			},
 			filter: {
-				type: 'highpass',
-				cutoff: 700,
-				q: 1
+				type: 'bandpass',
+				cutoff: 2500,
+				q: 0.5
 			}
 		}
 	}
 }
 const instrument6 = {
 	id: 1,
-	name: "Instrument 1", 
+	name: "Snare2", 
 	config: {
 		level: 1,
 		osc: {
 			enable: 1,
-			level: 1,
+			level: 0.3,
 			amplitude: {
-				attack: 0.2,
+				attack: 0,
 				attackType: 0,
-				decay: 5,
+				decay: 0.5,
 				decayType: 1
 			},
 			frequency: {
 				attack: 0,
 				attackType: 0,
-				decay: 3,
+				decay: 0.5,
 				decayType: 1,
-				startValue: 440,
-				endValue: 440
+				startValue: 330,
+				endValue: 330
 			}
 		},
 		noise: {
 			enable: 1,
 			level: 1,
 			amplitude: {
-				attack: 0.2,
+				attack: 0,
 				attackType: 0,
-				decay: 5,
+				decay: 0.5,
 				decayType: 1
 			},
 			filter: {
-				type: 'highpass',
-				cutoff: 440,
-				q: 1
+				type: 'bandpass',
+				cutoff: 4000,
+				q: 0.4
 			}
 		}
 	}
