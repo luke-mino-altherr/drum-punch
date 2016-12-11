@@ -1,14 +1,26 @@
 import { playInstrument } from '../actions'
-
+import Instrument from '.'
 class Sequencer {
-	constructor(config) {
-		this.enable = config.enable;
+	constructor() {
+	}
+
+	updateConfig(config) {
 		this.tempo = config.tempo;
 		this.resolution = config.resolution;
 		this.measureCount = config.measureCount;
 		this.sequence = config.sequence;
 		this.position = 0;
-		this.stopSequence();
+		// this.stopSequence();
+		if (config.enable) {
+			this.startSequence();
+		} else {
+			this.stopSequence();
+		}
+	}
+	updateInstruments(audioContext, master, config) {
+		this.audioContext = audioContext;
+		this.master = master;
+		this.instruments = config;
 	}
 
 	// User facing functions
@@ -36,7 +48,9 @@ class Sequencer {
 	play() {
 		for (var i = 0; i < this.sequence.length; i++) {
 			if (this.sequence[i][this.position] == 1) {
-				playInstrument(i+1);
+				const instr = new Instrument(
+					this.audioContext, this.master, this.instruments[i].config);
+				instr.trigger();
 			}
 		}
 		this.position += 1;

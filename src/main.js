@@ -1,10 +1,23 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './components';
- 
-document.addEventListener('DOMContentLoaded', function() {
-  ReactDOM.render(
-    React.createElement(App),
-    document.getElementById('mount')
-  );
-});
+import { render } from 'react-dom';
+
+// import components
+import App from './containers/App';
+import Pads from './components/Pads';
+
+// import react router deps
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+import { Provider } from 'react-redux';
+import store, { history } from './store';
+
+const router = (
+  <Provider store={store}>
+    <Router history={history}>
+      <Route path="/" component={App}>
+        <IndexRoute component={Pads}></IndexRoute>
+      </Route>
+    </Router>
+  </Provider>
+)
+
+render(router, document.getElementById('mount'));

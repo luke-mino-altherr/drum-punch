@@ -22,3 +22,11 @@
 	font-family: 'BungeeHairline';
 	font-size: .2em;
 }
+a:link {
+	text-decoration: none;
+	color: inherit;
+}
+
+a {
+	color: inherit;
+}
