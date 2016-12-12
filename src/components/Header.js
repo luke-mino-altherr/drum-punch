@@ -11,9 +11,9 @@ const Header = () => {
 
 			<span className="thin">// by LMA</span>
 
-			<Link className="control" to={'/sequencer'}>sequencer</Link>
+			<Link className="control" to={'/drum-punch/sequencer'}>sequencer</Link>
 			
-			<Link className="control" to={'/'}>Pads</Link>
+			<Link className="control" to={'/drum-punch'}>Pads</Link>
 
 			</div>
 		</div>

@@ -8,9 +8,7 @@ const Main = React.createClass({
 	render() {
   	return ( 
   		<div className="main" >
-  			<Link to="/">
-  				<Header />
-  			</Link>
+  			<Header />
   			{React.cloneElement(this.props.children, this.props)}
   			<Footer />
   		</div>
