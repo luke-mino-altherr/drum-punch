@@ -15,12 +15,14 @@
 }
 .header {
 	font-family: 'Bungee';
-	font-size: 8vw;
+	font-size: 10vw;
 	margin-bottom: 20px;
 }
 .thin {
 	font-family: 'BungeeHairline';
-	font-size: .2em;
+	font-size: 0.4em;
+	text-align: left;
+	margin-right: 24%;
 }
 a:link {
 	text-decoration: none;
@@ -29,4 +31,24 @@ a:link {
 
 a {
 	color: inherit;
+}
+.control {
+	font-size: 3vw;
+	color: grey;
+	padding: 1vw;
+}
+.control:hover {
+	color: black;
+}
+.left {
+	display: inline-block;
+	text-align: right;
+	width: 80%;
+	margin-right: 10%;
+}
+.right {
+	width: 30%;
+	display: inline-block;
+	text-align: right;
+	margin-right: 10%;
 }

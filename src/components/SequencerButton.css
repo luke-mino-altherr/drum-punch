@@ -1,0 +1,18 @@
+.active {
+	background-color: black;
+}
+.down {
+	background-color: #346392;
+}
+.inactive {
+	background-color: #6496c8;
+}
+.button {
+	width: 1.8vw;
+	height: 1.8vw;
+	display: inline-block;
+	margin: 0.2vw;
+}
+.button:hover {
+	background-color: #27496d;
+}
