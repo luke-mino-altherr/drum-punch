@@ -125,7 +125,7 @@ const instrument3 = {
 
 const instrument4 = {
 	id: 1,
-	name: "Kick Drum", 
+	name: "Kick", 
 	config: {
 		level: 1,
 		osc: {

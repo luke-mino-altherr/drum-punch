@@ -4,6 +4,7 @@ import { render } from 'react-dom';
 // import components
 import App from './containers/App';
 import Pads from './components/Pads';
+import Sequencer from './components/Sequencer'
 
 // import react router deps
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
@@ -14,7 +15,7 @@ const router = (
   <Provider store={store}>
     <Router history={history}>
       <Route path="/" component={App}>
-        <IndexRoute component={Pads}></IndexRoute>
+        <IndexRoute component={Sequencer}></IndexRoute>
       </Route>
     </Router>
   </Provider>

@@ -6,7 +6,7 @@ master.gain.value = 1;
 master.connect(audioContext.destination)
 
 import Sequencer from '../engine/sequencer'
-var sequencer = new Sequencer()
+var sequencer = new Sequencer(audioContext, master)
 
 export function playInstrument(id) {
   return (dispatch, getState) => {
@@ -18,16 +18,16 @@ export function playInstrument(id) {
   }
 }
 
-export const updateResolution = () => {
+export const updateResolution = (resolution) => {
 	return (dispatch, getState) => {
-		dispatch(updateResolutionAction);
+		dispatch(updateResolutionAction(resolution));
 		updateSequencer(dispatch, getState);
 	}
 }
 
-export const updateSequence = () => {
+export const updateSequence = (instrumentId, sequenceIndex) => {
 	return (dispatch, getState) => {
-		dispatch(updateSequenceAction);
+		dispatch(updateSequenceAction(instrumentId, sequenceIndex));
 		updateSequencer(dispatch, getState);
 	}
 }
@@ -39,15 +39,17 @@ export const updateMeasureCount = () => {
 	}
 }
 
-export const updateTempo = () => {
+export const updateTempo = (tempo) => {
 	return (dispatch, getState) => {
-		dispatch(updateTempoAction);
+		dispatch(updateTempoAction(tempo));
 		updateSequencer(dispatch, getState);
 	}
 }
 
 export const startSequencer = () => {
 	return (dispatch, getState) => {
+		if (getState().sequencer.enable)
+			return
 		dispatch(startSequencerAction());
 		updateSequencer(dispatch, getState);
 	}
@@ -55,17 +57,20 @@ export const startSequencer = () => {
 
 export const stopSequencer = () => {
 	return (dispatch, getState) => {
+		if (!getState().sequencer.enable)
+			return
 		dispatch(stopSequencerAction());
 		updateSequencer(dispatch, getState);
 	}
 }
+
 
 const updateSequencer = (dispatch, getState) => {
 	const state = getState();
 	const instrConfig = state.instruments;
 	const sequencerConfig = state.sequencer;
 		
-	sequencer.updateInstruments(audioContext, master, instrConfig);
+	sequencer.updateInstruments(instrConfig);
 	sequencer.updateConfig(sequencerConfig);
 }
 
@@ -95,10 +100,11 @@ const updateResolutionAction = (resolution) => {
 	}
 }
 
-const updateSequenceAction = (sequence) => {
+const updateSequenceAction = (instrumentId, sequenceIndex) => {
 	return {
 		type: "UPDATE_SEQUENCE", 
-		sequence
+		instrumentId,
+		sequenceIndex
 	}
 }
 

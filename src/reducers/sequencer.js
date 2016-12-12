@@ -17,14 +17,26 @@ function sequencer(state = [], action) {
         tempo: action.tempo
       }
     case "UPDATE_RESOLUTION": 
+      var measureCount = 32*action.resolution;
       return {
         ...state,
-        resolution: action.resolution
+        resolution: action.resolution,
+        measureCount: measureCount
       }
     case "UPDATE_SEQUENCE":
+      const newState = state.sequence[action.instrumentId][action.sequenceIndex] ? 0 : 1;
+      const newSequence = [
+        ...state.sequence[action.instrumentId].slice(0, action.sequenceIndex),
+        newState,
+        ...state.sequence[action.instrumentId].slice(action.sequenceIndex + 1)
+      ]
       return {
-        ...state, 
-        sequence: action.sequence
+        ...state,
+        sequence: [
+          ...state.sequence.slice(0, action.instrumentId),
+          newSequence,
+          ...state.sequence.slice(action.instrumentId + 1)
+        ]
       }
     case "UPDATE_MEASURECOUNT":
       return {

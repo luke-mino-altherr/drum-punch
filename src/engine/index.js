@@ -11,7 +11,6 @@ class Envelope {
 		if (startValue)
 			this.startValue = startValue;
 
-		console.log("start value:", this.startValue)
 		param.cancelScheduledValues(0);
 		param.setValueAtTime(this.endValue, currentTime);
 		this.aType ? param.exponentialRampToValueAtTime(this.startValue, currentTime+this.a):
@@ -58,10 +57,6 @@ class Signal {
 	trigger(time = 0) {
 		var now = this.audioContext.currentTime + time;
 
-		console.log("Triggering", now);
-
-		
-
 		if (this.enable) {
 			var level = this.level * this.masterLevel;
 
@@ -96,8 +91,6 @@ class Oscillator extends Signal {
 	constructor(context, masterFader, config) {
 		super(context, masterFader, config);
 
-		console.log(config);
-
 		this.freqEnv = new Envelope(0, 0, 
 			config.frequency.decay, 
 			config.frequency.decayType,
@@ -119,12 +112,9 @@ class Noise extends Signal {
 	constructor(context, masterFader, config) {
 		super(context, masterFader, config);
 		this.filterConfig = config.filter;
-		console.log(config);
 	}
 	trigger(time = 0) {
 		var now = this.audioContext.currentTime + time;
-
-		console.log("Triggering", now);
 
 		if (this.enable) {
 			var level = this.level * this.masterLevel;
