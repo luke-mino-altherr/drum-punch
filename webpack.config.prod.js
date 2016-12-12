@@ -3,27 +3,15 @@ var webpack = require('webpack');
 
 module.exports = {
   context: path.join(__dirname, 'src'),
-  devtool: 'source-map',
   entry: [
     './main'
   ],
   output: {
     path: path.join(__dirname, 'www'),
     filename: 'bundle.js',
-    publicPath: '/static/'
   },
   plugins: [
-    new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.DefinePlugin({
-      'process.env': {
-        'NODE_ENV': "'production'"
-      }
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      compressor: {
-        warnings: false
-      }
-    })
+    
   ],
   module: {
     loaders: [

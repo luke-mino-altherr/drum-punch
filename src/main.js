@@ -14,9 +14,9 @@ import store, { history } from './store';
 const router = (
   <Provider store={store}>
     <Router history={history}>
-      <Route path="/" component={App}>
+      <Route path="/drum-punch" component={App}>
         <IndexRoute component={Pads}></IndexRoute>
-        <Route path="/sequencer" component={Sequencer}></Route>
+        <Route path="/drum-punch/sequencer" component={Sequencer}></Route>
       </Route>
     </Router>
   </Provider>
