@@ -90,9 +90,9 @@
 	    { history: _store.history },
 	    _react2.default.createElement(
 	      _reactRouter.Route,
-	      { path: '/', component: _App2.default },
+	      { path: '/drum-punch', component: _App2.default },
 	      _react2.default.createElement(_reactRouter.IndexRoute, { component: _Pads2.default }),
-	      _react2.default.createElement(_reactRouter.Route, { path: '/sequencer', component: _Sequencer2.default })
+	      _react2.default.createElement(_reactRouter.Route, { path: '/drum-punch/sequencer', component: _Sequencer2.default })
 	    )
 	  )
 	);
@@ -23823,11 +23823,7 @@
 	    return _react2.default.createElement(
 	      'div',
 	      { className: 'main' },
-	      _react2.default.createElement(
-	        _reactRouter.Link,
-	        { to: '/' },
-	        _react2.default.createElement(_Header2.default, null)
-	      ),
+	      _react2.default.createElement(_Header2.default, null),
 	      _react2.default.cloneElement(this.props.children, this.props),
 	      _react2.default.createElement(_Footer2.default, null)
 	    );
@@ -28665,12 +28661,12 @@
 				),
 				_react2.default.createElement(
 					_reactRouter.Link,
-					{ className: 'control', to: '/sequencer' },
+					{ className: 'control', to: '/drum-punch/sequencer' },
 					'sequencer'
 				),
 				_react2.default.createElement(
 					_reactRouter.Link,
-					{ className: 'control', to: '/' },
+					{ className: 'control', to: '/drum-punch' },
 					'Pads'
 				)
 			)
