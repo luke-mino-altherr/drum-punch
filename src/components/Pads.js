@@ -14,27 +14,27 @@ class Pads extends React.Component {
 		switch (event.key) {
 			case 'z':
 			case 'm':
-				this.props.playInstrument(4);	
+				this.props.playInstrument(3);	
 				break;
 			case 'x':
 			case 'n':
-				this.props.playInstrument(5);	
+				this.props.playInstrument(4);	
 				break;
 			case 'c':
 			case 'b':
-				this.props.playInstrument(6);	
+				this.props.playInstrument(5);	
 				break;
 			case 's':
 			case 'j':
-				this.props.playInstrument(1);	
+				this.props.playInstrument(0);	
 				break;
 			case 'd':
 			case 'h':
-				this.props.playInstrument(2);	
+				this.props.playInstrument(1);	
 				break;
 			case 'f':
 			case 'g':
-				this.props.playInstrument(3);	
+				this.props.playInstrument(2);	
 				break;
 			case 'p':
 				this.props.startSequencer();
@@ -50,15 +50,15 @@ class Pads extends React.Component {
 		return ( 
 			<div className="pads" onKeyDown={this.handleKeyEvent}>
 			<div>
+				<Pad {...this.props} id={0} />
 				<Pad {...this.props} id={1} />
 				<Pad {...this.props} id={2} />
-				<Pad {...this.props} id={3} />
 			</div> 
 
 			<div>
+				<Pad {...this.props} id={3} />
 				<Pad {...this.props} id={4} />
 				<Pad {...this.props} id={5} />
-				<Pad {...this.props} id={6} />
 			</div>
 			</div>
 		)

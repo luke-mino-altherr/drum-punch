@@ -11,6 +11,8 @@ const Header = () => {
 
 			<span className="thin">// by LMA</span>
 
+			<Link className="control" to={`/drum-punch/edit/${0}`}>synth</Link>
+
 			<Link className="control" to={'/drum-punch/sequencer'}>sequencer</Link>
 			
 			<Link className="control" to={'/drum-punch'}>Pads</Link>
