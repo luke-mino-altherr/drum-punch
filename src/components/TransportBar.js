@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './TransportBar.css'
+import style from '../styles/TransportBar.css'
 
 class TransportBar extends React.Component {
   handleChangeEvent(event) {

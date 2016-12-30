@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import Header from './Header'
 import Footer from './Footer'
-import style from './Main.css'
+import style from '../styles/Main.css'
 
 const Main = React.createClass({
 	render() {

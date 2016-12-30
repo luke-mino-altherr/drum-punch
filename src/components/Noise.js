@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './Noise.css'
+import style from '../styles/Noise.css'
 import SignalControl from './SignalControl'
 import Envelope from './Envelope'
 import Filter from './Filter'

@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './SequencerButton.css'
+import style from '../styles/SequencerButton.css'
 
 class SequencerButton extends React.Component {
 	render() {

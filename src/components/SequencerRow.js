@@ -1,6 +1,6 @@
 import React from 'react';
 import SequencerButton from './SequencerButton'
-import style from './SequencerRow.css'
+import style from '../styles/SequencerRow.css'
 
 class SequencerRow extends React.Component {
 	render() {

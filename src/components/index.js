@@ -2,7 +2,7 @@ import React from 'react';
 import Pads from './Pads';
 import Header from './Header'
 import Footer from './Footer'
-import style from './index.css'
+import style from '../styles/index.css'
 
 const App = () => {
 	return ( 

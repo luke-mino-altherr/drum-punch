@@ -1,6 +1,6 @@
 import React from 'react';
 import Pad from './Pad'
-import style from './Pads.css'
+import style from '../styles/Pads.css'
 import {playInstrument} from '../actions'
 import { startSequencer, stopSequencer } from '../actions'
 

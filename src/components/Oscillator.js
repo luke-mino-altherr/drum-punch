@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './Oscillator.css'
+import style from '../styles/Oscillator.css'
 import SignalControl from './SignalControl'
 import Envelope from './Envelope'
 

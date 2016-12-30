@@ -1,7 +1,7 @@
 import React from 'react';
 import SequencerRow from './SequencerRow'
 import TransportBar from './TransportBar'
-import style from './Sequencer.css'
+import style from '../styles/Sequencer.css'
 
 class Sequencer extends React.Component {
 	render() {

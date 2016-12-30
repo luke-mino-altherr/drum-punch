@@ -9,7 +9,8 @@
     "test": "NODE_ENV=production mocha './tests/**/*.spec.js' --compilers js:babel-core/register",
     "clean": "rimraf wwww",
     "start": "node server.js",
-    "tunnel": "browser-sync start --proxy localhost:7770 --tunnel wesbos"
+    "tunnel": "browser-sync start --proxy localhost:7770 --tunnel wesbos",
+    "deploy": "git-directory-deploy --directory www --branch gh-pages"
   },
   "keywords": [],
   "author": "",

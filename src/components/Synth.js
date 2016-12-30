@@ -4,7 +4,7 @@ import { browserHistory } from 'react-router';
 import Oscillator from './Oscillator';
 import Noise from './Noise';
 import { Col, Row } from 'react-bootstrap';
-import style from './Synth.css'
+import style from '../styles/Synth.css'
 
 class Synth extends React.Component {
   constructor(props) {
@@ -40,6 +40,7 @@ class Synth extends React.Component {
           </select>
 
           <button id="play" onClick={this.handleChangeEvent.bind(this)}> 🔊 </button>
+          <br />
           <br />
           <label htmlFor="level">Volume</label>
             <input type="range" step="0.01" min="0" max="1" id="level"
