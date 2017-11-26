@@ -1,6 +1,6 @@
 .synth {
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 #play {
@@ -37,7 +37,7 @@ label:before {
 
 input[type=range] {
   -webkit-appearance: none;
-/*  width: 45% !important; */
+  width: 45% !important;
   /*margin: 13.8px 0;*/
   /*margin: auto;*/
   display: inline !important;
@@ -51,7 +51,7 @@ input[type=range]:focus {
   outline: none;
 }
 input[type=range]::-webkit-slider-runnable-track {
- /* width: 45% !important; */
+  width: 45% !important;
   height: 8.4px;
   cursor: pointer;
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
@@ -74,7 +74,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   background: rgba(54, 126, 189, 0.73);
 }
 input[type=range]::-moz-range-track {
- /* width: 45% !important;*/
+  width: 45% !important;
   height: 8.4px;
   cursor: pointer;
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
@@ -92,7 +92,7 @@ input[type=range]::-moz-range-thumb {
   cursor: pointer;
 }
 input[type=range]::-ms-track {
-/*  width: 50% !important; */
+  width: 50% !important;
   height: 8.4px;
   cursor: pointer;
   background: transparent;
