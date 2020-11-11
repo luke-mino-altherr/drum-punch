@@ -155,7 +155,7 @@ class Noise extends Signal {
 		var filter = this.audioContext.createBiquadFilter();
 		filter.type = this.filterConfig.type
 		filter.frequency.value = this.filterConfig.cutoff;
-		filter.q = this.filterConfig.q;
+		filter.Q.value = this.filterConfig.q;
 		return filter;
 	}
 }

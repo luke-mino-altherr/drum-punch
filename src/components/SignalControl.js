@@ -1,4 +1,5 @@
 import React from 'react';
+import style from '../styles/SignalControl.css';
 
 class SignalControl extends React.Component {
   handleChange(event) {
@@ -42,7 +43,7 @@ class SignalControl extends React.Component {
           </div>
         )
       } else {
-        return (<div><br /></div>)
+        return (<div className="placeholder"></div>)
       }
     }
     return (
@@ -59,7 +60,7 @@ class SignalControl extends React.Component {
         <input type="range" step="0.01" min="0" max="1" id="level"
           value={config.level} 
           onChange={this.handleChange.bind(this)} />
-          <input type="text" step="0.01" min="0" max="1" id="level"
+        <input type="text" step="0.01" min="0" max="1" id="level"
           value={config.level} 
           onChange={this.handleChange.bind(this)} />
         <br />

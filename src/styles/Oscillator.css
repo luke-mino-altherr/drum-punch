@@ -1,7 +1,6 @@
 .oscillator {
 
-	text-align: left;
-
+	text-align: center;
 }
 
 .oscillator h2 {
@@ -14,19 +13,10 @@
 
 .oscillator h2, .oscillator h3, .oscillator h4{
 	text-align: left;
-/*	margin-left: 12%;
-*/}
-
-/*.headingContainer {
-	width: 85%;
-	display: block;
-	margin-left:auto; 
-	margin-right:0;
-}*/
+}
 
 .oscillator select {
-  width: 50%;
-/*  margin-right: 60px;*/
+  width: 58%;
 }
 
 @media only screen and (min-width: 768px) { 

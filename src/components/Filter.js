@@ -19,9 +19,9 @@ class Filter extends React.Component {
     const config = this.props.instruments[id].config.noise.filter;
     console.log("NOISE",config)
     return (
-      <div>
+      <div className="pt-4">
 
-        <h3>Filter</h3>
+        <h4>Filter</h4>
 
         <label htmlFor="type">Type</label>
         <select id="type" defaultValue={config.type} onChange={this.handleChange.bind(this)}>

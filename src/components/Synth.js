@@ -32,25 +32,34 @@ class Synth extends React.Component {
     var active = parseInt(this.props.params.index);
     return (
       <div className="synth">
-        <Row>
-          <select id="activeInstrument" defaultValue={active} onChange={this.handleChangeEvent.bind(this)}>
-            {this.props.instruments.map((instrument, i) => 
-                <option key={i} value={i}>{instrument.name}</option>
-            )}
-          </select>
+        <div className="synthHeader">
+          <Row>
+            <div className="centered">
+              <button id="play" onClick={this.handleChangeEvent.bind(this)} className="p-3"> 🔊 </button>
 
-          <button id="play" onClick={this.handleChangeEvent.bind(this)}> 🔊 </button>
-          <br />
-          <br />
-          <label htmlFor="level">Volume</label>
-            <input type="range" step="0.01" min="0" max="1" id="level"
-              defaultValue={this.props.instruments[active].config.level} 
-              onChange={this.handleChangeEvent.bind(this)} 
-              className="mainVolume"
-              />
+              <select id="activeInstrument" defaultValue={active} onChange={this.handleChangeEvent.bind(this)}>
+                {this.props.instruments.map((instrument, i) => 
+                    <option key={i} value={i}>{instrument.name}</option>
+                )}
+              </select>
+            </div>
+          </Row>
+          <Row>
+            <div className="centered">
+              <label htmlFor="level">Volume</label>
+                <input type="range" step="0.01" min="0" max="1" id="level"
+                  defaultValue={this.props.instruments[active].config.level} 
+                  onChange={this.handleChangeEvent.bind(this)} 
+                  className="mainVolume"
+                  />
+            </div>
+          </Row>
+        </div>
+        
+        <Row>
+          <Col sm={6} className="m-0"><Oscillator {...this.props} /></Col>
+          <Col sm={6} className="m-0"><Noise {...this.props} /></Col>
         </Row>
-          <Row><Col sm={6}><Oscillator {...this.props} /></Col>
-          <Col sm={6}><Noise {...this.props} /></Col></Row>
       </div>
     )
   }
