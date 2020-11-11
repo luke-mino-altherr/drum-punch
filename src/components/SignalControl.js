@@ -48,6 +48,7 @@ class SignalControl extends React.Component {
     }
     return (
       <div>
+        <h4>Levels</h4>
         <label htmlFor="enable">Enable</label>
         <input type="range" step="1" min="0" max="1" id="enable"
           value={config.enable} 

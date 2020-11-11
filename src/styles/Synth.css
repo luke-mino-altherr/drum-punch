@@ -2,6 +2,13 @@
   margin-left: 15%;
   margin-right: 15%;
   align-items: center;
+  font-family: 'RobotoMono';
+  font-size: .7rem;
+}
+
+.synth h2 {
+  font-family: 'Bungee';
+  padding-top: 20;
 }
 
 .synth-header {}

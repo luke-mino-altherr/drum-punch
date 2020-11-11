@@ -13,7 +13,8 @@
 }
 
 .noise h2, .noise h3, .noise h4{
-	text-align: right;
+	text-align: center;
+	padding-bottom: 20;
 }
 
 .noise select {
