@@ -1,5 +1,6 @@
 import React from 'react';
 import style from '../styles/SignalControl.css';
+import Toggle from 'react-toggle';
 
 class SignalControl extends React.Component {
   handleChange(event) {
@@ -47,8 +48,8 @@ class SignalControl extends React.Component {
       }
     }
     return (
-      <div>
-        <h4>Levels</h4>
+      <div className="pb-3">
+        <h4 className="pb-2">Levels</h4>
         <label htmlFor="enable">Enable</label>
         <input type="range" step="1" min="0" max="1" id="enable"
           value={config.enable} 
@@ -64,7 +65,6 @@ class SignalControl extends React.Component {
         <input type="text" step="0.01" min="0" max="1" id="level"
           value={config.level} 
           onChange={this.handleChange.bind(this)} />
-        <br />
         {generateWaveform()}
         
       </div>

@@ -1,19 +1,15 @@
 .oscillator {
-
 	text-align: center;
 }
 
 .oscillator h2 {
-	padding-bottom: 15px;
 }
 
 .oscillator h3 {
-	padding-bottom: 8px;
 }
 
 .oscillator h2, .oscillator h3, .oscillator h4{
 	text-align: center;
-	padding-bottom: 15;
 }
 
 .oscillator select {

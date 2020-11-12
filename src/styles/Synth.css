@@ -11,7 +11,12 @@
   padding-top: 20;
 }
 
-.synth-header {}
+.synthHeader {}
+
+.synthContainer {
+  background: #d9dfe6;
+	border-radius: 15px;
+}
 
 .centered {
   display: block;
@@ -40,11 +45,6 @@ input[type=text] {
   width: 50px;
   margin-left:10px;
 }
-/*
-label:before {
-  content: '\A';
-  white-space: pre;
-}*/
 
 .mainVolume input[type=range] {
   width: 25% !important;

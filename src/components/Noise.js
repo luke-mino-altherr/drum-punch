@@ -8,8 +8,8 @@ class Noise extends React.Component {
   render() {
     var active = parseInt(this.props.params.index);
     return (
-      <div className="noise">
-        <h2> NOISE </h2>
+      <div className="noise synthContainer pb-4">
+        <h2 className="pb-4"> NOISE </h2>
         <SignalControl {...this.props} />
         <Envelope oscillator={0} amplitude={1} {...this.props} />
         <Filter {...this.props} />

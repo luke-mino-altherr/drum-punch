@@ -83,15 +83,15 @@ class Envelope extends React.Component {
     }
     if (this.props.amplitude) {
       config = config.amplitude
-      title = <h4>Amplitude Envelope</h4>
+      title = <h4 className="pb-2">Amplitude Envelope</h4>
     } else {
       config = config.frequency
-      title = <h4>Frequency Envelope</h4>
+      title = <h4 className="pb-2">Frequency Envelope</h4>
       freqParameters = frequency()
     }
     console.log("id", id, config);
     return(
-      <div className="pt-4">
+      <div className="pb-3">
         {title}
         <label htmlFor="attack">Attack</label>
         <input type="range" step="0.01" min="0" max="5" id="attack"

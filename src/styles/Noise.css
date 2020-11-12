@@ -1,20 +1,19 @@
 .noise {
 	text-align: center;
 	display: block;
-    margin: auto;
+	background: grey;
+	border-radius: 15px;	
+	margin: auto;
 }
 
 .noise h2 {
-	padding-bottom: 15px;
 }
 
 .noise h3 {
-	padding-bottom: 8px;
 }
 
 .noise h2, .noise h3, .noise h4{
 	text-align: center;
-	padding-bottom: 20;
 }
 
 .noise select {

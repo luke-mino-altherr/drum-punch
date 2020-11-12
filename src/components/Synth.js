@@ -32,7 +32,7 @@ class Synth extends React.Component {
     var active = parseInt(this.props.params.index);
     return (
       <div className="synth">
-        <div className="synthHeader">
+        <div className="synthHeader synthContainer mb-4">
           <Row>
             <div className="centered">
               <button id="play" onClick={this.handleChangeEvent.bind(this)} className="p-3"> 🔊 </button>

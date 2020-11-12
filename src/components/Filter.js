@@ -19,7 +19,7 @@ class Filter extends React.Component {
     const config = this.props.instruments[id].config.noise.filter;
     console.log("NOISE",config)
     return (
-      <div className="pt-4">
+      <div className="pb-3">
 
         <h4>Filter</h4>
 
