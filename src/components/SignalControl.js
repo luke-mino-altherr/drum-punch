@@ -1,6 +1,5 @@
 import React from 'react';
 import style from '../styles/SignalControl.css';
-import Toggle from 'react-toggle';
 
 class SignalControl extends React.Component {
   handleChange(event) {

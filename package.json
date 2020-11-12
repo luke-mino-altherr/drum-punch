@@ -51,6 +51,7 @@
     "git-directory-deploy": "^1.5.1",
     "resolve-url-loader": "^1.6.0",
     "style-loader": "^0.13.1",
-    "url-loader": "^0.5.7"
+    "url-loader": "^0.5.7",
+    "webpack-cli": "^4.2.0"
   }
 }

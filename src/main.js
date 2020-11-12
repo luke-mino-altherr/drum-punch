@@ -7,8 +7,6 @@ import Pads from './components/Pads';
 import Sequencer from './components/Sequencer';
 import Synth from './components/Synth'
 
-import 'react-toggle/style.css';
-
 // import react router deps
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import { Provider } from 'react-redux';
